@@ -2,20 +2,20 @@
 //   Side Information   //
 //////////////////////////
 
-["name", ""] call _fnc_saveToTemplate;
+["name", ""] call _fnc_saveToTemplate;    //this line determines the faction name -- Example: ["name", "NATO"] - ENTER ONLY ONE OPTION
 ["spawnMarkerName", ""] call _fnc_saveToTemplate;
 
-["flag", ""] call _fnc_saveToTemplate;
-["flagTexture", ""] call _fnc_saveToTemplate;
-["flagMarkerType", ""] call _fnc_saveToTemplate;
+["flag", ""] call _fnc_saveToTemplate;    //this line determines the flag -- Example: ["flag", "Flag_NATO_F"] - ENTER ONLY ONE OPTION
+["flagTexture", ""] call _fnc_saveToTemplate;    //this line determines the flag texture -- Example: ["flagTexture", "\A3\Data_F\Flags\Flag_NATO_CO.paa"] - ENTER ONLY ONE OPTION
+["flagMarkerType", ""] call _fnc_saveToTemplate;    //this line determines the flag marker type -- Example: ["flagMarkerType", "flag_NATO"] - ENTER ONLY ONE OPTION
 
 //////////////////////////
 //       Vehicles       //
 //////////////////////////
 
-["ammobox", ""] call _fnc_saveToTemplate;     //Don't touch or you die a sad and lonely death!
-["surrenderCrate", ""] call _fnc_saveToTemplate; //Changeing this from default will require you to define logistics attachement offset for the box type
-["equipmentBox", ""] call _fnc_saveToTemplate; //Changeing this from default will require you to define logistics attachement offset for the box type
+["ammobox", ""] call _fnc_saveToTemplate;    //Don't touch or you die a sad and lonely death!
+["surrenderCrate", ""] call _fnc_saveToTemplate;    //Changeing this from default will require you to define logistics attachement offset for the box type
+["equipmentBox", ""] call _fnc_saveToTemplate;    //Changeing this from default will require you to define logistics attachement offset for the box type
 
 ["vehiclesBasic", []] call _fnc_saveToTemplate;
 ["vehiclesLightUnarmed", []] call _fnc_saveToTemplate;
@@ -46,7 +46,7 @@ private _AA = [];
 ["vehiclesHelisAttack", []] call _fnc_saveToTemplate;
 
 ["vehiclesArtillery", []] call _fnc_saveToTemplate;
-["magazines", createHashMapFromArray []] call _fnc_saveToTemplate;
+["magazines", createHashMapFromArray []] call _fnc_saveToTemplate;    //element format: [Vehicle class, [Magazines]]
 
 ["uavsAttack", []] call _fnc_saveToTemplate;
 ["uavsPortable", []] call _fnc_saveToTemplate;
@@ -68,6 +68,7 @@ private _AA = [];
 ["mortarMagazineFlare", ""] call _fnc_saveToTemplate;
 
 //Minefield definition
+//CFGVehicles variant of Mines are needed "ATMine", "APERSTripMine", "APERSMine"
 ["minefieldAT", []] call _fnc_saveToTemplate;
 ["minefieldAPERS", []] call _fnc_saveToTemplate;
 
@@ -85,7 +86,7 @@ if (allowDLCWS) then {
 ["vehiclesLightArmed", _lightArmed] call _fnc_saveToTemplate;
 ["vehiclesAA", _AA] call _fnc_saveToTemplate;
 
-#include ".sqf" //include vehicle attribute file
+#include ".sqf"    //include vehicle attribute file
 
 /////////////////////
 ///  Identities   ///
@@ -151,9 +152,9 @@ _loadoutData set ["glasses", []];
 _loadoutData set ["goggles", []];
 
 //Item *set* definitions. These are added in their entirety to unit loadouts. No randomisation is applied.
-_loadoutData set ["items_medical_basic", ["BASIC"] call A3A_fnc_itemset_medicalSupplies]; //this line defines the basic medical loadout for vanilla
-_loadoutData set ["items_medical_standard", ["STANDARD"] call A3A_fnc_itemset_medicalSupplies]; //this line defines the standard medical loadout for vanilla
-_loadoutData set ["items_medical_medic", ["MEDIC"] call A3A_fnc_itemset_medicalSupplies]; //this line defines the medic medical loadout for vanilla
+_loadoutData set ["items_medical_basic", ["BASIC"] call A3A_fnc_itemset_medicalSupplies];    //this line defines the basic medical loadout for vanilla
+_loadoutData set ["items_medical_standard", ["STANDARD"] call A3A_fnc_itemset_medicalSupplies];    //this line defines the standard medical loadout for vanilla
+_loadoutData set ["items_medical_medic", ["MEDIC"] call A3A_fnc_itemset_medicalSupplies];    //this line defines the medic medical loadout for vanilla
 _loadoutData set ["items_miscEssentials", [] call A3A_fnc_itemset_miscEssentials];
 
 //Unit type specific item sets. Add or remove these, depending on the unit types in use.
@@ -189,13 +190,14 @@ _loadoutData set ["items_unarmed_extras", []];
 //    Special Forces Loadout Data    //
 ///////////////////////////////////////
 
-private _sfLoadoutData = _loadoutData call _fnc_copyLoadoutData; // touch and shit breaks
+private _sfLoadoutData = _loadoutData call _fnc_copyLoadoutData;    // touch and shit breaks
 _sfLoadoutData set ["uniforms", []];
 _sfLoadoutData set ["vests", []];
 _sfLoadoutData set ["Hvests", []];
 _sfLoadoutData set ["backpacks", []];
 _sfLoadoutData set ["helmets", []];
 _sfLoadoutData set ["binoculars", []];
+//["Weapon", "Muzzle", "Rail", "Sight", [], [], "Bipod"];
 
 _sfLoadoutData set ["slRifles", []];
 _sfLoadoutData set ["rifles", []];
@@ -211,7 +213,7 @@ _sfLoadoutData set ["sidearms", []];
 //    Military Loadout Data    //
 /////////////////////////////////
 
-private _militaryLoadoutData = _loadoutData call _fnc_copyLoadoutData; // touch and shit breaks
+private _militaryLoadoutData = _loadoutData call _fnc_copyLoadoutData;    // touch and shit breaks
 _militaryLoadoutData set ["uniforms", []];
 _militaryLoadoutData set ["slUniforms", []];
 _militaryLoadoutData set ["vests", []];
@@ -234,7 +236,7 @@ _militaryLoadoutData set ["sidearms", []];
 //    Police Loadout Data    //
 ///////////////////////////////
 
-private _policeLoadoutData = _loadoutData call _fnc_copyLoadoutData; // touch and shit breaks
+private _policeLoadoutData = _loadoutData call _fnc_copyLoadoutData;    // touch and shit breaks
 _policeLoadoutData set ["uniforms", []];
 _policeLoadoutData set ["vests", []];
 _policeLoadoutData set ["helmets", []];
@@ -246,7 +248,7 @@ _policeLoadoutData set ["sidearms", []];
 //    Militia Loadout Data    //
 ////////////////////////////////
 
-private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData; // touch and shit breaks
+private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData;    // touch and shit breaks
 _militiaLoadoutData set ["uniforms", []];
 _militiaLoadoutData set ["vests", []];
 _militiaLoadoutData set ["Hvests", []];
@@ -267,7 +269,7 @@ _militiaLoadoutData set ["sidearms", []];
 //////////////////////////
 
 
-private _crewLoadoutData = _militaryLoadoutData call _fnc_copyLoadoutData; // touch and shit breaks
+private _crewLoadoutData = _militaryLoadoutData call _fnc_copyLoadoutData;    // touch and shit breaks
 _crewLoadoutData set ["uniforms", []];
 _crewLoadoutData set ["vests", []];
 _crewLoadoutData set ["helmets", []];
@@ -285,7 +287,11 @@ _pilotLoadoutData set ["helmets", []];
 /////////////////////////////////
 //    Unit Type Definitions    //
 /////////////////////////////////
-
+//These define the loadouts for different unit types.
+//For example, rifleman, grenadier, squad leader, etc.
+//In 95% of situations, you *should not need to edit these*.
+//Almost all factions can be set up just by modifying the loadout data above.
+//However, these exist in case you really do want to do a lot of custom alterations.
 
 private _squadLeaderTemplate = {
     ["slHat"] call _fnc_setHelmet;
@@ -762,9 +768,9 @@ private _unitTypes = [
 
 [_prefix, _unitTypes, _policeLoadoutData] call _fnc_generateAndSaveUnitsToTemplate;
 
-////////////////////////
+/////////////////////////
 //    Militia Units    //
-////////////////////////
+/////////////////////////
 private _prefix = "militia";
 private _unitTypes = [
     ["SquadLeader", _squadLeaderTemplate],
