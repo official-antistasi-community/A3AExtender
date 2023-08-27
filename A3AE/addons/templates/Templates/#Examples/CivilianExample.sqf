@@ -1,45 +1,61 @@
+//////////////////////////////
+//   Civilian Information   //
+//////////////////////////////
+
 //////////////////////////
 //       Vehicles       //
-//////////////////////////    
+//////////////////////////
 
-["vehiclesCivCar", []] call _fnc_saveToTemplate;             //this line determines civilian cars -- Example: ["vehiclesCivCar", ["C_Offroad_01_F"]] -- Array, can contain multiple assets
+["vehiclesCivCar", []] call _fnc_saveToTemplate;
 
-["vehiclesCivIndustrial", []] call _fnc_saveToTemplate;             //this line determines civilian trucks -- Example: ["vehiclesCivIndustrial", ["C_Truck_02_transport_F"]] -- Array, can contain multiple assets
+["vehiclesCivIndustrial", []] call _fnc_saveToTemplate;
 
-["vehiclesCivHeli", []] call _fnc_saveToTemplate;             //this line determines civilian helis -- Example: ["vehiclesCivHeli", ["C_Heli_Light_01_civil_F"]] -- Array, can contain multiple assets
+["vehiclesCivHeli", []] call _fnc_saveToTemplate;
 
-["vehiclesCivBoat", []] call _fnc_saveToTemplate;             //this line determines civilian boats -- Example: ["vehiclesCivBoat", ["C_Boat_Civil_01_F"]] -- Array, can contain multiple assets
+["vehiclesCivBoat", []] call _fnc_saveToTemplate;
 
-["vehiclesCivRepair", []] call _fnc_saveToTemplate;            //this line determines civilian repair vehicles
+["vehiclesCivRepair", []] call _fnc_saveToTemplate;
 
-["vehiclesCivMedical", []] call _fnc_saveToTemplate;        //this line determines civilian medic vehicles
+["vehiclesCivMedical", []] call _fnc_saveToTemplate;
 
-["vehiclesCivFuel", []] call _fnc_saveToTemplate;            //this line determines civilian fuel vehicles
+["vehiclesCivFuel", []] call _fnc_saveToTemplate;
 
+/////////////////////
+///  Identities   ///
+/////////////////////
+
+["faces", []] call _fnc_saveToTemplate;
+"CivMen" call _fnc_saveNames;
 
 //////////////////////////
 //       Loadouts       //
 //////////////////////////
 
-private _civUniforms = [];          //Uniforms given to Normal Civs
+private _civUniforms = [];
 
-private _pressUniforms = [];            //Uniforms given to Press/Journalists
+private _pressUniforms = [];
 
-private _workerUniforms = [];           //Uniforms given to Workers at Factories/Resources
+private _workerUniforms = [ ];
 
-private _dlcUniforms = [];          //Uniforms given if DLCs are enabled, only given to the Arsenal not Civilians
+private _dlcUniforms = [];
 
 if (allowDLCExpansion) then {_dlcUniforms append [];
 };
 
-if (allowDLCOrange) then {_dlcUniforms append [];
+if (allowDLCOrange) then {
+  _dlcUniforms append [];
+  _workerUniforms append [];
 };
 
-["uniforms", _civUniforms + _pressUniforms + _workerUniforms + _dlcUniforms] call _fnc_saveToTemplate;          //Uniforms given to the Arsenal, Allowed for Undercover and given to Rebel Ai that go Undercover
+if (allowDLCWS) then {
+  _dlcUniforms append [];
+};
 
-_civhats = [];
+["uniforms", _civUniforms + _pressUniforms + _workerUniforms + _dlcUniforms] call _fnc_saveToTemplate;
 
-["headgear", _civHats] call _fnc_saveToTemplate;            //Headgear given to Normal Civs, Workers, Undercover Rebels.
+private _civhats = [];
+
+["headgear", _civHats] call _fnc_saveToTemplate;
 
 private _loadoutData = call _fnc_createLoadoutData;
 
