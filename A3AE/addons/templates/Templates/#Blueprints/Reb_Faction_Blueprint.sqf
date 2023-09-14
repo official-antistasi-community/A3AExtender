@@ -13,16 +13,16 @@
 ["vehiclesLightArmed", []] call _fnc_saveToTemplate;    //this line determines light and armed vehicles -- Example: ["B_MRAP_01_hmg_F","B_MRAP_01_gmg_F"] -- Array, can have multiple entries
 ["vehiclesTruck", []] call _fnc_saveToTemplate;    //this line determines the trucks -- Example: ["B_Truck_01_transport_F","B_Truck_01_covered_F"] -- Array, can have multiple entries
 ["vehiclesAT", []] call _fnc_saveToTemplate;    //this line determines AT vehicle -- Example: ["B_Truck_01_transport_F","B_Truck_01_covered_F"] -- Array, can have multiple entries
-["vehiclesAA", []] call _fnc_saveToTemplate;    //this line determines AA vehicle -- Example: private _vehicleAA = [["B_Truck_01_transport_F","B_Truck_01_covered_F"] -- Array, can have multiple entries
+["vehiclesAA", []] call _fnc_saveToTemplate;    //this line determines AA vehicle -- Example: ["B_Truck_01_transport_F","B_Truck_01_covered_F"] -- Array, can have multiple entries
 
 ["vehiclesBoat", []] call _fnc_saveToTemplate;    //this line determines transport boats -- Array, can have multiple entries
 
 ["vehiclesPlane", []] call _fnc_saveToTemplate;    //this line determines CAS planes -- Array, can have multiple entries
 
-["vehiclesCivCar", []] call _fnc_saveToTemplate;
-["vehiclesCivTruck", []] call _fnc_saveToTemplate;
-["vehiclesCivHeli", []] call _fnc_saveToTemplate;
-["vehiclesCivBoat", []] call _fnc_saveToTemplate;
+["vehiclesCivCar", []] call _fnc_saveToTemplate;    //this line determines civilian cars -- Array, can have multiple entries
+["vehiclesCivTruck", []] call _fnc_saveToTemplate;    //this line determines civilian trucks -- Array, can have multiple entries
+["vehiclesCivHeli", []] call _fnc_saveToTemplate;    //this line determines civilian helis -- Array, can have multiple entries
+["vehiclesCivBoat", []] call _fnc_saveToTemplate;    //this line determines civilian boats -- Array, can have multiple entries
 
 ["staticMGs", []] call _fnc_saveToTemplate;    //this line determines static MGs -- Array, can have multiple entries
 ["staticAT", []] call _fnc_saveToTemplate;    //this line determinesstatic ATs -- Array, can have multiple entries
