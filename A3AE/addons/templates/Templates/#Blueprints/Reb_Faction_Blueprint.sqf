@@ -13,20 +13,20 @@
 ["vehiclesLightArmed", []] call _fnc_saveToTemplate;    //this line determines light and armed vehicles -- Example: ["B_MRAP_01_hmg_F","B_MRAP_01_gmg_F"] -- Array, can have multiple entries
 ["vehiclesTruck", []] call _fnc_saveToTemplate;    //this line determines the trucks -- Example: ["B_Truck_01_transport_F","B_Truck_01_covered_F"] -- Array, can have multiple entries
 ["vehiclesAT", []] call _fnc_saveToTemplate;    //this line determines AT vehicle -- Example: ["B_Truck_01_transport_F","B_Truck_01_covered_F"] -- Array, can have multiple entries
-private _vehicleAA = [];    //this line determines AA vehicle -- Example: private _vehicleAA = [["B_Truck_01_transport_F","B_Truck_01_covered_F"] -- Array, can have multiple entries
+["vehiclesAA", []] call _fnc_saveToTemplate;    //this line determines AA vehicle -- Example: private _vehicleAA = [["B_Truck_01_transport_F","B_Truck_01_covered_F"] -- Array, can have multiple entries
 
 ["vehiclesBoat", []] call _fnc_saveToTemplate;    //this line determines transport boats -- Array, can have multiple entries
 
 ["vehiclesPlane", []] call _fnc_saveToTemplate;    //this line determines CAS planes -- Array, can have multiple entries
 
-private _vehiclesCivCar = [];
+["vehiclesCivCar", []] call _fnc_saveToTemplate;
 ["vehiclesCivTruck", []] call _fnc_saveToTemplate;
 ["vehiclesCivHeli", []] call _fnc_saveToTemplate;
 ["vehiclesCivBoat", []] call _fnc_saveToTemplate;
 
 ["staticMGs", []] call _fnc_saveToTemplate;    //this line determines static MGs -- Array, can have multiple entries
 ["staticAT", []] call _fnc_saveToTemplate;    //this line determinesstatic ATs -- Array, can have multiple entries
-private _staticAA = [];    //this line determines static AAs -- Array, can have multiple entries
+["staticAA", []] call _fnc_saveToTemplate;    //this line determines static AAs -- Array, can have multiple entries
 ["staticMortars", []] call _fnc_saveToTemplate;    //this line determines static mortars -- Array, can have multiple entries
 ["staticMortarMagHE", ""] call _fnc_saveToTemplate;    //this line determines HE shells for static mortars - String, single entry
 ["staticMortarMagSmoke", ""] call _fnc_saveToTemplate;    //this line determines smoke shells static mortars - String, single entry
@@ -37,11 +37,6 @@ private _staticAA = [];    //this line determines static AAs -- Array, can have 
 
 ["breachingExplosivesAPC", []] call _fnc_saveToTemplate;    //this line determines explosives needed for breaching APCs -- Array, can have multiple entries
 ["breachingExplosivesTank", []] call _fnc_saveToTemplate;    //this line determines explosives needed for breaching Tanks -- Array, can have multiple entries
-
-["vehiclesCivCar", _vehiclesCivCar] call _fnc_saveToTemplate;
-
-["vehiclesAA", _vehicleAA] call _fnc_saveToTemplate;
-["staticAA", _staticAA] call _fnc_saveToTemplate;
 
 #include "Reb_Vehicle_Attributes_Blueprint.sqf"    //include vehicle attribute file
 
