@@ -72,21 +72,11 @@ private _AA = [];
 ["minefieldAT", []] call _fnc_saveToTemplate;
 ["minefieldAPERS", []] call _fnc_saveToTemplate;
 
-//If Tank DLC
-if (allowDLCTanks) then {
-    // No seats so can't be APC
-    _lightArmed append [];
-};
-//If Western Sahara DLC
-if (allowDLCWS) then {
-    _cargoTrucks = [];
-    _AA append [];
-};
 ["vehiclesCargoTrucks", _cargoTrucks] call _fnc_saveToTemplate;
 ["vehiclesLightArmed", _lightArmed] call _fnc_saveToTemplate;
 ["vehiclesAA", _AA] call _fnc_saveToTemplate;
 
-#include ".sqf"    //include vehicle attribute file
+#include "AI_Vehicle_Attributes_Blueprint.sqf"    //include vehicle attribute file
 
 /////////////////////
 ///  Identities   ///

@@ -38,19 +38,12 @@ private _staticAA = [];    //this line determines static AAs -- Array, can have 
 ["breachingExplosivesAPC", []] call _fnc_saveToTemplate;    //this line determines explosives needed for breaching APCs -- Array, can have multiple entries
 ["breachingExplosivesTank", []] call _fnc_saveToTemplate;    //this line determines explosives needed for breaching Tanks -- Array, can have multiple entries
 
-if (allowDLCExpansion) then {
-    _vehiclesCivCar append [];
-};
 ["vehiclesCivCar", _vehiclesCivCar] call _fnc_saveToTemplate;
 
-if (allowDLCWS) then {
-  _vehicleAA append [];
-  _staticAA insert [0, []];
-};
 ["vehiclesAA", _vehicleAA] call _fnc_saveToTemplate;
 ["staticAA", _staticAA] call _fnc_saveToTemplate;
 
-#include ".sqf"    //include vehicle attribute file
+#include "Reb_Vehicle_Attributes_Blueprint.sqf"    //include vehicle attribute file
 
 ///////////////////////////
 //  Rebel Starting Gear  //
