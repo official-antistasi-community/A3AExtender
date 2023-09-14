@@ -68,13 +68,13 @@ private _rebUniforms = [];    //Uniforms given to Normal Rebels
 
 private _dlcUniforms = [];    //Uniforms given if DLCs are enabled, only given to the Arsenal not Rebels
 
-if (allowDLCEnoch) then {_dlcUniforms append [];
+if ("enoch" in A3A_enabledDLC) then {_dlcUniforms append [];
 };
 
-if (allowDLCExpansion) then {_dlcUniforms append [];
+if ("expansion" in A3A_enabledDLC) then {_dlcUniforms append [];
 };
 
-if (allowDLCWS) then {_dlcUniforms append [];
+if ("ws" in A3A_enabledDLC) then {_dlcUniforms append [];
 };
 
 ["uniforms", _rebUniforms + _dlcUniforms] call _fnc_saveToTemplate;    //These Items get added to the Arsenal
