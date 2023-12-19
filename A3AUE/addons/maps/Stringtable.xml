@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="A3AUExtender">
+  <Package name="A3AUExtender">
+    <Container name="credits_generic">
+      <Key ID="STR_A3AUE_credits_generic_author">
+        <Original>The Official Antistasi Community and Barbolani</Original>
+      </Key>
+    </Container>
+    <Container name="mission_info">
+      <Key ID="STR_A3AUE_maps_Altis_mapname_short">
+        <Original>Antistasi Altis Extender Overwritten map</Original>
+      </Key>
+      <Key ID="STR_A3AUE_maps_Altis_mapname">
+        <Original>Antistasi - Liberation of Altis Extender Overwritten map</Original>
+      </Key>
+      <Key ID="STR_A3AUE_maps_Altis_description">
+        <Original>Fuck some shit up on a overwritten map</Original>
+      </Key>
+      <Key ID="STR_A3AUE_maps_Altis_loadText">
+        <Original>Because nothing is more important than fun. on a overwritten map</Original>
+      </Key>
+
+      <Key ID="STR_A3AUE_maps_Other_Altis_mapname_short">
+        <Original>Antistasi Altis Extender New map</Original>
+      </Key>
+      <Key ID="STR_A3AUE_maps_Other_Altis_mapname">
+        <Original>Antistasi - Liberation of Altis Extender New map</Original>
+      </Key>
+      <Key ID="STR_A3AUE_maps_Other_Altis_description">
+        <Original>Fuck some shit up on a new map</Original>
+      </Key>
+      <Key ID="STR_A3AUE_maps_Other_Altis_loadText">
+        <Original>Because nothing is more important than fun. on a new map</Original>
+      </Key>
+    </Container>
+  </Package>
+</Project>
