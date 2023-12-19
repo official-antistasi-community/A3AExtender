@@ -1,5 +1,5 @@
 # Antistasi Ultimate Extender Example
-This is an example of how you could extend Antistasi Ultimate with new templates or overwrite existing ones.
+This is an example of how you could extend Antistasi Ultimate with new maps and templates or overwrite existing ones.
 This is a fork of `A3AExtender` made by `Antistsi Official Community Arma 3`
 
 # Requirements
@@ -28,7 +28,7 @@ This is a fork of `A3AExtender` made by `Antistsi Official Community Arma 3`
   As a hint all content is added from the config.cpp files located within each of the addons so you can follow that down to the files that govern the different parts like templates and functions etc.
 
 
-<!-- # Example additions
+# Example additions
 ## Maps
 Antistasi now supports 3rd party map porting.
 
@@ -38,7 +38,7 @@ There are two examples added for working with maps. Adding a new map and overwri
 
   You will find all the information regarding this under `your extension mod/addons/maps`.
 
-  Take care to study all the files in the addon to not miss crucial porting steps. -->
+  Take care to study all the files in the addon to not miss crucial porting steps.
 
 ## Templates
 Antistasi now supports 3rd party template additions/overwrites.
