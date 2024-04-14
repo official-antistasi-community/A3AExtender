@@ -12,7 +12,6 @@ KeysLimit = 2;  // Even if player tampers with his unlocked keys, this will neve
 	}; //used mainly to detect that the mission is a A3A mission, can also contain other data in the future
 #endif
 
-#include "debug.hpp"
 #include "gameSettings.hpp"
 #include "params.hpp"
 #include "CfgIdentities.hpp"
